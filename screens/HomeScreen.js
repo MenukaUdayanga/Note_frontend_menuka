@@ -24,7 +24,7 @@ export default function App({ navigation }) {
 
   const DataAll = () => {
 
-    fetch('http://192.168.37.76:3000/api/usnt/getAllnote')
+    fetch('http://192.168.164.76:3000/api/usnt/getAllnote')
       .then((response) => response.json())
       .then((json) => {
         setData(json)
@@ -34,7 +34,7 @@ export default function App({ navigation }) {
   }
 
   const Delete = (itemId) => {
-    fetch(`http://192.168.37.76:3000/api/usnt/note_delete/${itemId}`, {
+    fetch(`http://192.168.164.76:3000/api/usnt/note_delete/${itemId}`, {
       method: 'DELETE',
     })
     .then((response) => {

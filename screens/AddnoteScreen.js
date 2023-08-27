@@ -12,7 +12,7 @@ export default function AddNoteScreen({ navigation }) {
   const [image, setImage] = useState('');
 
   const NoteSave = () => {
-    fetch('http://192.168.37.76:3000/api/usnt/note_save', {
+    fetch('http://192.168.164.76:3000/api/usnt/note_save', {
       method: 'POST',
       body: JSON.stringify({
         subject:subject,

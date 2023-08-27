@@ -16,7 +16,7 @@ export default function UpdatenoteScreen({ navigation }) {
 
   useEffect(() => {
     // Fetch existing data and populate the form fields
-    fetch(`http://192.168.37.76:3000/api/usnt/getById/${itemId}`)
+    fetch(`http://192.168.164.76:3000/api/usnt/getById/${itemId}`)
       .then((response) => response.json())
       .then((data) => {
         console.log('Fetched data:', data);
@@ -55,7 +55,7 @@ export default function UpdatenoteScreen({ navigation }) {
   };
 
   const Update = () => {
-    fetch(`http://192.168.182.76:3000/api/usnt/note_update/${itemId}`, {
+    fetch(`http://192.168.164.76:3000/api/usnt/note_update/${itemId}`, {
       method: 'PUT',
       body: JSON.stringify({
         subject: subject,

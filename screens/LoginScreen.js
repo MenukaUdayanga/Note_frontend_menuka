@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, KeyboardAvoidingView, ScrollView, ActivityIndicator,Image } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 
-const API_URL = 'http://192.168.37.76:3000/api/uslo/user_login';
+const API_URL = 'http:/192.168.164.76:3000/api/uslo/user_login';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');

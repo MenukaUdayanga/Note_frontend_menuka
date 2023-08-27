@@ -12,7 +12,7 @@ export default function RegisterScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const Register = () => {
-    fetch('http://192.168.37.76:3000/api/us/user_register', {
+    fetch('http://192.168.164.76:3000/api/us/user_register', {
       method: 'POST',
       body: JSON.stringify({
         firstName: fname,
