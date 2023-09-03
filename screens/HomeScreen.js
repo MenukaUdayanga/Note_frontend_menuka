@@ -5,7 +5,7 @@ import { Avatar, Card, FAB } from 'react-native-paper';
 import { TextInput } from 'react-native-paper';
 import { ActivityIndicator, MD2Colors } from 'react-native-paper';
 
-export default function App({ navigation }) {
+export default function HomeScreen({ navigation }) {
 
   const [data, setData] = useState([])
   const [isLoad, setIsload] = useState(false)
@@ -24,7 +24,7 @@ export default function App({ navigation }) {
 
   const DataAll = () => {
 
-    fetch('http://192.168.164.76:3000/api/usnt/getAllnote')
+    fetch('http://192.168.243.76:3000/api/usnt/getAllnote')
       .then((response) => response.json())
       .then((json) => {
         setData(json)
@@ -34,7 +34,7 @@ export default function App({ navigation }) {
   }
 
   const Delete = (itemId) => {
-    fetch(`http://192.168.164.76:3000/api/usnt/note_delete/${itemId}`, {
+    fetch(`http://192.168.243.76:3000/api/usnt/note_delete/${itemId}`, {
       method: 'DELETE',
     })
     .then((response) => {
